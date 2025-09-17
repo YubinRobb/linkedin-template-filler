@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Template Filler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LinkedIn Connection Request Template Filler</h1>
+            <p>Generate personalized LinkedIn connection request templates</p>
+        </header>
+
+        <main class="main-content">
+            <div class="content-grid">
+                <div class="form-section">
+                    <h2>Input Fields</h2>
+                    <form id="templateForm" class="form-container">
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title *</label>
+                            <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., Tax Practitioner" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location *</label>
+                            <input type="text" id="location" name="location" placeholder="e.g., South Africa" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numProfessionals">Number of Professionals to Search *</label>
+                            <input type="number" id="numProfessionals" name="numProfessionals" placeholder="e.g., 10" min="1" max="100" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customFilter">🤖 AI Intelligence Instructions (Optional)</label>
+                            <textarea id="customFilter" name="customFilter" rows="3" placeholder="e.g., Chinese speaking professionals, candidates with bilingual skills, people with Asia-Pacific work experience, professionals educated in Chinese-speaking regions, etc."></textarea>
+                            <small class="form-help">Instructions for AI to assess language capabilities and professional background from profile content (no appearance/ethnicity analysis)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="connectionMessage">Connection Message *</label>
+                            <textarea id="connectionMessage" name="connectionMessage" rows="4" placeholder="Enter your personalized connection message" required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" id="clearForm" class="btn btn-secondary">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="template-section">
+                    <h2>Live Template Preview</h2>
+                    <div id="templateContent" class="template-content live-preview"></div>
+                    <div class="output-actions">
+                        <button id="copyTemplate" class="btn btn-success">Copy to Clipboard</button>
+                        <button id="downloadTemplate" class="btn btn-success">Download Template</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 LinkedIn Template Filler Tool</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
